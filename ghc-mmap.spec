@@ -1,12 +1,13 @@
 %define	pkgname	mmap
 Summary:	Memory mapped files for POSIX and Windows
 Name:		ghc-%{pkgname}
-Version:	0.5.4
+Version:	0.4.1
 Release:	1
+Epoch:		1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	10b7f62d96e7f1b83dac4dfc66cb4f97
+# Source0-md5:	2ebe9772a0efd0a6febfbc67c02faab2
 URL:		http://hackage.haskell.org/package/%{pkgname}/
 BuildRequires:	ghc >= 6.10
 %requires_eq	ghc

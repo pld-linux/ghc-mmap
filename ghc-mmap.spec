@@ -2,7 +2,7 @@
 Summary:	Memory mapped files for POSIX and Windows
 Name:		ghc-%{pkgname}
 Version:	0.5.6
-Release:	4
+Release:	5
 Epoch:		1
 License:	BSD
 Group:		Development/Languages

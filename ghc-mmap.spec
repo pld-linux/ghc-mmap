@@ -1,21 +1,20 @@
-%define	pkgname	mmap
+%define		pkgname	mmap
 Summary:	Memory mapped files for POSIX and Windows
 Name:		ghc-%{pkgname}
 Version:	0.5.6
-Release:	3
+Release:	4
 Epoch:		1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
 # Source0-md5:	642ecd97d88229ba4cd0a6d14b43f113
-URL:		http://hackage.haskell.org/package/%{pkgname}/
+URL:		http://hackage.haskell.org/package/mmap/
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-HUnit
+BuildRequires:	rpmbuild(macros) >= 1.608
 %requires_releq	ghc
 Requires:	ghc-HUnit
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		ghcdir		ghc-%(/usr/bin/ghc --numeric-version)
 
 %description
 This library provides a wrapper to mmap(2) or MapViewOfFile,
@@ -54,10 +53,10 @@ runhaskell Setup.hs register \
 rm -rf $RPM_BUILD_ROOT
 
 %post
-/usr/bin/ghc-pkg recache
+%ghc_pkg_recache
 
 %postun
-/usr/bin/ghc-pkg recache
+%ghc_pkg_recache
 
 %files
 %defattr(644,root,root,755)

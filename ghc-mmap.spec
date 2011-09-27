@@ -7,7 +7,7 @@ Epoch:		1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	642ecd97d88229ba4cd0a6d14b43f113
+# Source0-md5:	1f74b3f59617332b06e277f5212423c1
 URL:		http://hackage.haskell.org/package/mmap/
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-HUnit

@@ -1,13 +1,13 @@
 %define		pkgname	mmap
 Summary:	Memory mapped files for POSIX and Windows
 Name:		ghc-%{pkgname}
-Version:	0.5.7
+Version:	0.5.8
 Release:	1
 Epoch:		1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	1f74b3f59617332b06e277f5212423c1
+# Source0-md5:	737e0f0a82dcfbc71e69c1b7b52de07e
 URL:		http://hackage.haskell.org/package/mmap/
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-HUnit
@@ -56,8 +56,9 @@ install -d $RPM_BUILD_ROOT%{_libdir}/%{ghcdir}/package.conf.d
 runhaskell Setup.hs copy --destdir=$RPM_BUILD_ROOT
 
 # work around automatic haddock docs installation
-rm -rf %{name}-%{version}-doc
+%{__rm} -rf %{name}-%{version}-doc
 cp -a $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/html %{name}-%{version}-doc
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
 runhaskell Setup.hs register \
 	--gen-pkg-config=$RPM_BUILD_ROOT/%{_libdir}/%{ghcdir}/package.conf.d/%{pkgname}.conf

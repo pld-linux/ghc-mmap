@@ -1,13 +1,13 @@
 %define		pkgname	mmap
 Summary:	Memory mapped files for POSIX and Windows
 Name:		ghc-%{pkgname}
-Version:	0.5.8
+Version:	0.5.9
 Release:	1
 Epoch:		1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	737e0f0a82dcfbc71e69c1b7b52de07e
+# Source0-md5:	625301d54b9789e890174e38028c1bcb
 URL:		http://hackage.haskell.org/package/mmap/
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-HUnit
